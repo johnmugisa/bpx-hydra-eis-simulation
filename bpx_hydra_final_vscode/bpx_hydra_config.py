@@ -34,7 +34,7 @@ VAR_PTS = {
 #   "multiplier"  -> use original converter tau_ct multiplied by TAU_CT_MULTIPLIER
 #   "converter"   -> use original PyBOP converter tau_ct unchanged
 TAU_CT_MODE = "from_bpx_j0"
-TAU_CT_MULTIPLIER = 0.12
-
+# TAU_CT_MULTIPLIER = 0.12
+TAU_CT_MULTIPLIER = 1
 USE_TOTAL_AREA_FOR_GROUPING = True
 FORCE_NOMINAL_CAPACITY_IN_GROUPED_MODEL = True
