@@ -8,7 +8,7 @@ OUT_DIR = Path("result")
 
 SOC = 0.5
 
-FMIN = 2e-4
+FMIN = 5e-3
 FMAX = 1e5
 NFREQ = 100
 

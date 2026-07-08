@@ -142,7 +142,7 @@ def capacity_scale(Z, capacity_Ah, unit):
     raise ValueError("unit must be 'ohm', 'mohm', or 'mohm_Ah'.")
 
 
-def make_physical_params_from_bpx(bpx_or_file, soc=0.5, contact_resistance_ohm=0.0):
+def make_physical_params_from_bpx(bpx_or_file, soc=0.5, contact_resistance_ohm=0.5):
     if isinstance(bpx_or_file, (str, Path)):
         bpx = load_bpx(bpx_or_file)
     else:
@@ -235,7 +235,7 @@ def make_physical_params_from_bpx(bpx_or_file, soc=0.5, contact_resistance_ohm=0
         "Negative electrode active material volume fraction": alpha_n,
         "Negative electrode Bruggeman coefficient (electrolyte)": b_n_e,
         "Negative electrode Bruggeman coefficient (electrode)": 1.5,
-        "Negative electrode double-layer capacity [F.m-2]": 0.02,
+        "Negative electrode double-layer capacity [F.m-2]": 1.02,
         "Negative electrode OCP entropic change [V.K-1]": fnum(neg.get("Entropic change coefficient [V.K-1]", 0.0)),
         "Maximum concentration in positive electrode [mol.m-3]": c_p_max,
         "Initial concentration in positive electrode [mol.m-3]": x_p0 * c_p_max,
@@ -249,7 +249,7 @@ def make_physical_params_from_bpx(bpx_or_file, soc=0.5, contact_resistance_ohm=0
         "Positive electrode active material volume fraction": alpha_p,
         "Positive electrode Bruggeman coefficient (electrolyte)": b_p_e,
         "Positive electrode Bruggeman coefficient (electrode)": 1.5,
-        "Positive electrode double-layer capacity [F.m-2]": 0.092,
+        "Positive electrode double-layer capacity [F.m-2]": 1.92,
         "Positive electrode OCP entropic change [V.K-1]": fnum(pos.get("Entropic change coefficient [V.K-1]", 0.0)),
         "Separator porosity": eps_s,
         "Separator Bruggeman coefficient (electrolyte)": b_s_e,
